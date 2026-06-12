@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Opciones - Inactivity URL Loader</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button#resetBtn {
+      background-color: #f44336;
+    }
+    button#resetBtn:hover {
+      background-color: #da190b;
+    }
+    #status {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e7f3fe;
+      border-left: 4px solid #2196F3;
+      font-size: 13px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Opciones de Configuración</h1>
+  
+  <label for="url">URL a cargar:</label>
+  <input type="text" id="url" placeholder="https://ejemplo.com">
+  
+  <label for="minutes">Tiempo de inactividad (minutos):</label>
+  <input type="number" id="minutes" min="1" value="5">
+  
+  <div class="checkbox-group">
+    <input type="checkbox" id="autoStart">
+    <label for="autoStart" style="margin: 0; font-weight: normal;">Iniciar automáticamente al abrir el navegador</label>
+  </div>
+  
+  <button id="saveBtn">Guardar</button>
+  <button id="resetBtn">Resetear</button>
+  
+  <div id="status" class="hidden"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
